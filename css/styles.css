@@ -40,28 +40,25 @@ footer {
     background-color: #9eb5bb;
 }
 
+/* Nav */
 #cabecera {
     float: left;
     width: 1200px;
     height: 150px;
     background-color: #e3a59a;
-}
-
-/* Nav */
-nav {
-    width: 1200px;
+    display: flex;
+    align-items: center;
 }
 
 /* Lista de navegación */
-nav ul {
+#cabecera ul {
     list-style: none;
     display: flex;
-    gap: 10px;
+    flex-grow: 1;
 }
 
 /* Botones */
-nav ul li {
-    width: 270px;
+#cabecera ul li {
     height: 120px;
     background-color: #a696d0;
     display: flex;
@@ -70,4 +67,25 @@ nav ul li {
     color: white;
     font-weight: bold;
     cursor: pointer;
+    margin-left: 40px;
+    flex: 1 1 270px; /* flex-grow 1, flex-shrink 1, flex-basis 270px */
+}
+
+/* Último botón */
+#cabecera ul li:last-child {
+    margin-right: 40px;
+}
+
+/* Flex para tamaños diferentes */
+#cabecera ul li:first-child {
+    flex: 3 1; /* el primer botón es más grande */
+}
+
+#cabecera ul li:nth-child(2) {
+    flex: 1 1; /* el segundo botón es el más pequeño */
+}
+
+/* Los demás botones ocupan espacio normal */
+#cabecera ul li:nth-child(n+3) {
+    flex: 2 1;
 }
