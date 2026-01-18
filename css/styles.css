@@ -77,15 +77,17 @@ footer {
 }
 
 /* Flex para tamaños diferentes */
+/* El primer botón crece más y no se encoge */
 #cabecera ul li:first-child {
-    flex: 3 1; /* el primer botón es más grande */
+    flex: 2 0 270px; 
 }
 
+/* El segundo botón no crece y se encoge más */
 #cabecera ul li:nth-child(2) {
-    flex: 1 1; /* el segundo botón es el más pequeño */
+    flex: 0 2 270px;
 }
 
-/* Los demás botones ocupan espacio normal */
+/* Los demás botones crecen y se encogen por igual */
 #cabecera ul li:nth-child(n+3) {
-    flex: 2 1;
+    flex: 1 1 270px;
 }
